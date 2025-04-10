@@ -1,44 +1,69 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("cadastroEnderecoForm");
+document.getElementById("cep").addEventListener("input", async function(){
+	const cep = this.value.replace(/\D/g, "");
+	
+	if (cep.length === 8){
+		try{
+			const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+			
+			if(!response.ok) throw new Error("Erro ao buscar CEP");
+			
+			const dados = await response.json();
+			
+			if (dados.erro){
+				alert("CEP não encontrado.")
+				return;
+			}
+			
+			document.getElementById("rua").value = dados.logradouro;
+			document.getElementById("bairro").value = dados.bairro;
+			document.getElementById("cidade").value = dados.localidade;
+			document.getElementById("estado").value = dados.estado;
+				
+		} catch (error) {
+			alert("Erro ao buscar o endereço: " + error.message);
+		}
+		
+	}
+})
 
-    form.addEventListener("submit", async (event) => {
-        event.preventDefault();
+document.getElementById("cadastroEnderecoForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
 
-        const cep = document.getElementById("cep").value;
-        const rua = document.getElementById("rua").value;
-        const bairro = document.getElementById("bairro").value;
-        const numero = document.getElementById("numero").value;
-        const cidade = document.getElementById("cidade").value;
-        const estado = document.getElementById("estado").value;
-        const complemento = document.getElementById("complemento").value;
+    const cep = document.getElementById("cep").value;
+    const nomeRua = document.getElementById("rua").value;
+    const numeroCasa = document.getElementById("numero").value;
+    const bairro = document.getElementById("bairro").value;
+    const cidade = document.getElementById("cidade").value;
+    const estado = document.getElementById("estado").value;
+	const complemento = document.getElementById("complemento").value;
+	const idUsuario = localStorage.getItem("idUsuario");
 
-        try {
-            const response = await fetch("http://localhost:8080/enderecos", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    cep,
-                    rua,
-                    bairro,
-                    numero,
-                    cidade,
-                    estado,
-                    complemento
-                }),
-            });
+    try {
+        const response = await fetch("http://localhost:8080/cadastroendereco", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(
+				{ 
+					cep,
+					rua: nomeRua,
+					numero: numeroCasa,
+					bairro,
+					cidade,
+					estado,
+                    complemento,
+					usuario: {
+					    idUsuario: idUsuario
+					}
+				}),
+        });
 
-            if (response.ok) {
-                setTimeout(function () {
-                    window.location.href = "./index.html";
-                }, 1000);
-            } else {
-                alert("Erro ao cadastrar o endereço do cliente");
-            }
-        } catch (error) {
-            console.error("Erro ao cadastrar o endereço do cliente", error);
-            alert("Ocorreu um erro ao tentar cadastrar o endereço. Tente novamente.");
+        if (!response.ok) {
+            throw new Error("Erro ao cadastrar endereço");
         }
-    });
+		else{
+			window.location.href = "index.html";  // Altere para a próxima página desejada
+		}
+    } catch (error) {
+        alert(error.message);
+    }
 });

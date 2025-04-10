@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="../css/cadastroUsuario.css">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastramento do usuário</title>
+</head>
+
+<body>
+	<main id="form_container">
+		<div id="form_header">
+			<h1 id="form_title">
+				Cadastrar-se
+			</h1>
+		</div>
+
+		<form id="cadastroUsuarioForm">
+			<div id="input_container">
+				<div class="input-box">
+					<label for="nomeUsuario" class="form-label">
+						Nome
+					</label>
+					<div class="input-field">
+						<input type="text" name="nomeUsuario" id="nomeUsuario" class="form-control" required="required"
+							autofocus>
+						<i class="fa-solid fa-circle-user"></i>
+					</div>
+				</div>
+
+				<div class="input-box">
+					<label for="emailUsuario" class="form-label">
+						E-mail
+					</label>
+					<div class="input-field">
+						<input type="email" name="emailUsuario" id="emailUsuario" class="form-control" required
+							placeholder="Exemplo: email@gmail.com">
+						<i class="fa-solid fa-envelope"></i>
+					</div>
+				</div>
+
+				<div class="input-box">
+					<label for="senhaUsuario" class="form-label">
+						Senha
+					</label>
+					<div class="input-field">
+						<input type="password" name="senhaUsuario" id="senhaUsuario" class="form-control" placeholder="*******">
+						<i class="fa-solid fa-eye-slash"></i>
+					</div>
+				</div>
+
+				<div class="input-box">
+					<label for="telefoneUsuario" class="form-label">
+						Telefone
+					</label>
+					<div class="input-field">
+						<input type="tel" name="telefoneUsuario" id="telefoneUsuario" class="form-control" required
+							placeholder="(00) 00000-0000">
+						<i class="fa-solid fa-phone"></i>
+					</div>
+				</div>
+
+				<div class="input-box">
+					<label for="cpfUsuario" class="form-label">
+						CPF
+					</label>
+					<div class="input-field">
+						<input type="text" name="cpfUsuario" id="cpfUsuario" class="form-control" required="required" autofocus>
+						<i class="fa-solid fa-address-card"></i>
+					</div>
+				</div>
+
+				<div class="input-box">
+					<label for="dt_nascimento" class="form-label">
+						Data de Nascimento
+					</label>
+					<div class="input-field">
+						<input type="date" name="dt_nascimento" id="dt_nascimento" class="form-control"
+							required="required" autofocus>
+					</div>
+				</div>
+			</div> 
+
+			<button type="submit" class="btn-default" name="enviar" value="Enviar">Cadastrar-se</button>
+		</form>
+	</main>
+
+	<script src="./script/scriptCadastroUsuario.js"></script>
+</body>
+</html>
