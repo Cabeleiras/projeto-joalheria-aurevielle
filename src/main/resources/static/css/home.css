@@ -398,8 +398,9 @@ a {
 
 .footer-bottom {
     background-color: #222;
-    padding: 10px;
+    padding: 0px;
     width: 100%;
+    
 }
 
 .footer-bottom p {

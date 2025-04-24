@@ -28,9 +28,7 @@ public class Produto {
     @Column(name = "preco", nullable = false, precision = 10, scale = 2)
     private BigDecimal preco;
     
-    @Column(name = "estoque", nullable = false)
-    private Integer estoque;
-
+  
     @ManyToOne
     @JoinColumn(name = "categoria_id", nullable = false)
     private CategoriaProduto categoriaProduto;
@@ -47,13 +45,13 @@ public class Produto {
     public Produto() {
     }
 
-    public Produto(Long idProduto, String nomeProduto, String descricaoProduto, BigDecimal preco, Integer estoque,
+    public Produto(Long idProduto, String nomeProduto, String descricaoProduto, BigDecimal preco,
                    CategoriaProduto categoriaProduto, TipoProduto tipoProduto, Ornamentos ornamento) {
         this.idProduto = idProduto;
         this.nomeProduto = nomeProduto;
         this.descricaoProduto = descricaoProduto;
         this.preco = preco;
-        this.estoque = estoque;
+      
         this.categoriaProduto = categoriaProduto;
         this.tipoProduto = tipoProduto;
         this.ornamento = ornamento;
@@ -92,13 +90,7 @@ public class Produto {
         this.preco = preco;
     }
 
-    public Integer getEstoque() {
-        return estoque;
-    }
-
-    public void setEstoque(Integer estoque) {
-        this.estoque = estoque;
-    }
+ 
 
     public CategoriaProduto getCategoriaProduto() {
         return categoriaProduto;

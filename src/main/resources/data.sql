@@ -18,5 +18,6 @@ INSERT IGNORE INTO tb_tipo_produto (id_tipo_produto, nome_tipo_produto, descrica
 
 
 -- Inserindo Ornamentos (se não existirem)
-INSERT IGNORE INTO tb_ornamento (id_ornamento, nome_ornamento) VALUES
-(1, 'Ruby', 'Uma jóia rara, de cor vermelha');
+INSERT INTO tb_ornamentos (id_ornamento, nome_ornamento, descricao_ornamento)
+VALUES (1, 'Ruby', 'Uma jóia rara, de cor vermelha')
+ON DUPLICATE KEY UPDATE nome_ornamento=VALUES(nome_ornamento);
