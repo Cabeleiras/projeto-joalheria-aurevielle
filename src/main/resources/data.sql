@@ -18,6 +18,9 @@ INSERT IGNORE INTO tb_tipo_produto (id_tipo_produto, nome_tipo_produto, descrica
 
 
 -- Inserindo Ornamentos (se não existirem)
-INSERT INTO tb_ornamentos (id_ornamento, nome_ornamento, descricao_ornamento)
-VALUES (1, 'Ruby', 'Uma jóia rara, de cor vermelha')
-ON DUPLICATE KEY UPDATE nome_ornamento=VALUES(nome_ornamento);
+INSERT IGNORE INTO tb_ornamentos (id_ornamento, nome_ornamento, descricao_ornamento) VALUES 
+(1, 'Ruby', 'Pedra preciosa vermelha, símbolo de paixão e nobreza'),
+(2, 'Ametista', 'Pedra roxa associada à proteção e espiritualidade'),
+(3, 'Topázio', 'Pode ter várias cores, ligada à clareza e foco'),
+(4, 'Lápis-lazúli', 'Azul intenso, símbolo de realeza e intuição'),
+(5, 'Jade', 'Símbolo de sabedoria e serenidade, de cor verde');
