@@ -1,6 +1,6 @@
 package br.com.joalheriaaurevielle.app.controllers;
 
-import java.security.Provider.Service;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.com.joalheriaaurevielle.app.entities.Usuario;
 import br.com.joalheriaaurevielle.app.services.UsuarioService;
 
@@ -50,5 +49,13 @@ public class UsuarioController {
         usuarioService.deleteUsuario(id);
     }
     
+    @PostMapping("/login")
+    public Usuario login(@RequestBody Usuario loginRequest) {
+    	Usuario usuario = usuarioService.autenticarUsuario(loginRequest.getEmail(), loginRequest.getSenha());
 
+        if (usuario != null) {
+            return usuario;
+        }
+        return null;
+    }
 }

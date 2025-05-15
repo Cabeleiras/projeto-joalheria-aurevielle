@@ -1,29 +1,18 @@
-const passwordIcons = document.querySelectorAll('.password-icon');
+document.getElementById("formLogin").addEventListener("submit", async function (event) {
+	event.preventDefault();
 
-passwordIcons.forEach(icon => {
-    icon.addEventListener('click', function () {
-        const input = this.parentElement.querySelector('.form-control');
-        input.type = input.type === 'password' ? 'text' : 'password';
-        this.classList.toggle('fa-eye');
-    })
-})
+	const email = document.getElementById("email").value;
+	const senha = document.getElementById("senha").value;
 
-  // Evento de submissão do formulário
-  document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio padrão
-
-    // Simulando validação de login (substituir com lógica real, se necessário)
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    if (username === 'admin' && password === '1234') {
-        // Salva mensagem de sucesso no localStorage
-        localStorage.setItem('loginSuccess', 'Login efetuado com sucesso!');
-        
-        // Redireciona para a página Home
-        window.location.href = 'home.html';
-    } else {
-        alert('Usuário ou senha inválidos!');
-    }
+	try {
+		const response = await fetch("http://localhost:8080/login", {
+			method: "GET",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({
+			}),
+		})
+	} catch (error) {
+		console.error("Erro ao cadastrar o usuário", error);
+		alert("Ocorreu um erro ao tentar cadastrar o usuário. Tente novamente.");
+	}
 });
-

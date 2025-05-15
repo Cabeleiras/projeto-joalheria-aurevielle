@@ -8,18 +8,6 @@ document.getElementById("cadastroUsuarioForm").addEventListener("submit", async 
 	const dt_nascimento = document.getElementById("dt_nascimento").value;
 	const senhaUsuario = document.getElementById("senhaUsuario").value;
 
-	console.log(JSON.stringify({
-	nomeUsuario,
-	cpf: cpfUsuario,
-	email: emailUsuario,
-	telefone,
-	dt_nascimento,
-	senha: senhaUsuario,
-	tipoUsuario: {
-		idTipoUsuario: 2
-	}
-	}));
-
 	try {
 		const response = await fetch("http://localhost:8080/cadastrocliente", {
 			method: "POST",
