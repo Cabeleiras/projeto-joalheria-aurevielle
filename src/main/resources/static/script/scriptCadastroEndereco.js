@@ -29,6 +29,12 @@ document.getElementById("cep").addEventListener("input", async function(){
 document.getElementById("cadastroEnderecoForm").addEventListener("submit", async function(event) {
     event.preventDefault();
 
+	if (!usuarioId) {
+        alert("Usuário não encontrado. Por favor, cadastre um usuário primeiro.");
+        window.location.href = "../cadastroUsuario.html";
+        return;
+    }
+
     const cep = document.getElementById("cep").value;
     const nomeRua = document.getElementById("rua").value;
     const numeroCasa = document.getElementById("numero").value;
@@ -55,14 +61,22 @@ document.getElementById("cadastroEnderecoForm").addEventListener("submit", async
 					    idUsuario: idUsuario
 					}
 				}),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Erro ao cadastrar jogo.");
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert("Cadastro do endereço realizado com sucesso!");
+            localStorage.removeItem('usuarioId');
+            window.location.href = "../index.html";
+        })
+        .catch(error => {
+            console.error("Erro:", error);
+            alert("Erro ao cadastrar endereço. Tente novamente.");
         });
-
-        if (!response.ok) {
-            throw new Error("Erro ao cadastrar endereço");
-        }
-		else{
-			window.location.href = "index.html";  // Altere para a próxima página desejada
-		}
     } catch (error) {
         alert(error.message);
     }

@@ -1,4 +1,4 @@
-document.getElementById("cadastroUsuarioForm").addEventListener("submit", async function(event) {
+document.getElementById("cadastroUsuarioForm").addEventListener("submit", async function (event) {
 	event.preventDefault();
 
 	const nomeUsuario = document.getElementById("nomeUsuario").value;
@@ -20,22 +20,27 @@ document.getElementById("cadastroUsuarioForm").addEventListener("submit", async 
 				dt_nascimento,
 				senha: senhaUsuario,
 				tipoUsuario: {
-					idTipoUsuario: 2		
+					idTipoUsuario: 2
 				}
 			}),
-		});
-		if (response.ok) { // Verifica se a resposta é bem-sucedida
-			const novoUsuario = await response.json(); // aqui vem o id
-			const idUsuario = novoUsuario.idUsuario;
+		})
+			.then(response => {
+				if (!response.ok) {
+					throw new Error('Erro ao cadastrar usuário');
+				}
+				return response.json();
+			})
+			.then(data => {
+				alert("Cadastro realizado com sucesso!");
 
-			// Salva no localStorage
-			localStorage.setItem("idUsuario", idUsuario);
+				localStorage.setItem('usuarioId', data.idUsuario); 
 
-			// Vai para o formulário de endereço
-			window.location.href = "cadastroEndereco.html";
-		} else {
-			alert("Erro ao cadastrar o cliente"); // Exibe alerta de erro se a resposta não for bem-sucedida
-		}
+				window.location.href = '../cadastroEndereco.html';
+			})
+			.catch(error => {
+				console.error('Erro no cadastro:', error);
+				alert('Falha ao cadastrar jogador. Tente novamente.');
+			});
 	} catch (error) {
 		console.error("Erro ao cadastrar o cliente", error);
 		alert("Ocorreu um erro ao tentar cadastrar o cliente. Tente novamente.");
