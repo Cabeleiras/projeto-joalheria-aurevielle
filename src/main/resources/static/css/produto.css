@@ -1,8 +1,53 @@
-body{
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.Navegaçãoprincipal{
-display: flex;
+
+header {
+    background-color: #f5f5f5;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-family: 'Georgia', serif;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo a:hover h1 {
+    color: #b87bf19a; /* Roxo suave ao passar o mouse */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #444;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #9a4ae5b4;
+    color: #fff;
 }
 
 .produtos {
