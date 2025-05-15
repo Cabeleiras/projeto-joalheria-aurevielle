@@ -1,14 +1,15 @@
 document.getElementById("cadastroProdutoForm").addEventListener("submit", async function (event) {
 	event.preventDefault();
 
+	const form = document.getElementById("cadastroProdutoForm");
 
-	const nomeProduto = document.getElementById("nomeProduto");
-	const descricao = document.getElementById("descricao");
-	const preco = document.getElementById("preco");
-	const imgUrl = document.getElementById("imgUrl");
-	const categoriaProduto = document.getElementById("categoriaProduto");
-	const tipoProduto = document.getElementById("tipoProduto");
-	const ornamentoProduto = document.getElementById("ornamentoProduto");
+	const nomeProduto = document.getElementById("nomeProduto").value;
+	const descricao = document.getElementById("descricao").value;
+	const preco = document.getElementById("preco").value;
+	const imgUrl = document.getElementById("imgUrl").value;
+	const categoriaProduto = document.getElementById("categoriaProduto").value;
+	const tipoProduto = document.getElementById("tipoProduto").value;
+	const ornamentoProduto = document.getElementById("ornamentoProduto").value;
 
 	try {
 		const response = await fetch("http://localhost:8080/cadastroproduto", {
@@ -17,18 +18,18 @@ document.getElementById("cadastroProdutoForm").addEventListener("submit", async 
 				"Content-Type": "application/json"
 			},
 			body: JSON.stringify({
-				nomeProduto: nomeProduto,
+				nomeProduto,
 				descricaoProduto: descricao,
-				preco: parseFloat(preco),
-				imgUrl: imgUrl,
+				preco,
+				imgUrl,
 				categoriaProduto: {
-					idCategoriaProduto: parseInt(categoriaProduto)
+					idCategoriaProduto: categoriaProduto
 				},
 				tipoProduto: {
-					idTipoProduto: parseInt(tipoProduto)
+					idTipoProduto: tipoProduto
 				},
 				ornamento: {
-					idOrnamento: parseInt(ornamentoProduto)
+					idOrnamento: ornamentoProduto
 				}
 			}),
 		});
