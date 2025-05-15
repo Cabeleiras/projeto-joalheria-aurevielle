@@ -1,5 +1,6 @@
 package br.com.joalheriaaurevielle.app.controllers;
 
+import java.security.Provider.Service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,6 @@ public class UsuarioController {
 	    Usuario novoUsuario = usuarioService.saveUsuario(usuario);
 	    return ResponseEntity.ok(novoUsuario);
 	}
-
     
     @GetMapping
     public List<Usuario> getAllUsuarios() {
@@ -49,4 +49,6 @@ public class UsuarioController {
     public void deleteUsuario(@PathVariable Long id) {
         usuarioService.deleteUsuario(id);
     }
+    
+
 }

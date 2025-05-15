@@ -8,6 +8,18 @@ document.getElementById("cadastroUsuarioForm").addEventListener("submit", async 
 	const dt_nascimento = document.getElementById("dt_nascimento").value;
 	const senhaUsuario = document.getElementById("senhaUsuario").value;
 
+	console.log(JSON.stringify({
+	nomeUsuario,
+	cpf: cpfUsuario,
+	email: emailUsuario,
+	telefone,
+	dt_nascimento,
+	senha: senhaUsuario,
+	tipoUsuario: {
+		idTipoUsuario: 2
+	}
+	}));
+
 	try {
 		const response = await fetch("http://localhost:8080/cadastrocliente", {
 			method: "POST",
@@ -17,7 +29,7 @@ document.getElementById("cadastroUsuarioForm").addEventListener("submit", async 
 				cpf: cpfUsuario,
 				email: emailUsuario,
 				telefone,
-				dt_nascimento,
+				dataNascimento: dt_nascimento,
 				senha: senhaUsuario,
 				tipoUsuario: {
 					idTipoUsuario: 2
@@ -39,10 +51,10 @@ document.getElementById("cadastroUsuarioForm").addEventListener("submit", async 
 			})
 			.catch(error => {
 				console.error('Erro no cadastro:', error);
-				alert('Falha ao cadastrar jogador. Tente novamente.');
+				alert('Falha ao cadastrar usuário. Tente novamente.');
 			});
 	} catch (error) {
-		console.error("Erro ao cadastrar o cliente", error);
-		alert("Ocorreu um erro ao tentar cadastrar o cliente. Tente novamente.");
+		console.error("Erro ao cadastrar o usuário", error);
+		alert("Ocorreu um erro ao tentar cadastrar o usuário. Tente novamente.");
 	}
 });

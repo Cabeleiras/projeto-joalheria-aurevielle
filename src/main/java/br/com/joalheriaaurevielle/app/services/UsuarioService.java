@@ -29,4 +29,13 @@ public class UsuarioService {
     public void deleteUsuario(Long id) {
         usuarioRepository.deleteById(id);
     }
+    
+    public Usuario autenticarUsuario(String email, String senha) {
+        Usuario usuario = usuarioRepository.findByEmail(email);
+
+        if (usuario != null && usuario.getSenha().equals(senha)) {
+            return usuario;
+        }
+        return null;
+    }
 }

@@ -29,6 +29,8 @@ document.getElementById("cep").addEventListener("input", async function(){
 document.getElementById("cadastroEnderecoForm").addEventListener("submit", async function(event) {
     event.preventDefault();
 
+	const usuarioId = localStorage.getItem('usuarioId');
+
 	if (!usuarioId) {
         alert("Usuário não encontrado. Por favor, cadastre um usuário primeiro.");
         window.location.href = "../cadastroUsuario.html";
@@ -58,7 +60,7 @@ document.getElementById("cadastroEnderecoForm").addEventListener("submit", async
 					estado,
                     complemento,
 					usuario: {
-					    idUsuario: idUsuario
+					    idUsuario: Number(usuarioId)
 					}
 				}),
         })
