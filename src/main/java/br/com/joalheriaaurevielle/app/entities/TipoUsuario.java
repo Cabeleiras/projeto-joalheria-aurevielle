@@ -2,6 +2,8 @@ package br.com.joalheriaaurevielle.app.entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,6 +27,7 @@ public class TipoUsuario {
     private String descricao;
 
     @OneToMany(mappedBy = "tipoUsuario")
+    @JsonManagedReference
     private List<Usuario> usuarios;
 
     // Construtores

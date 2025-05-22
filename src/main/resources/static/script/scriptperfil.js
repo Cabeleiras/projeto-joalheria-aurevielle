@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Depois, atribui ao conteúdo de texto interno (textContent) desse elemento o valor da propriedade 'nome' do objeto 'usuario'.
   // O operador lógico OR (||) é usado para garantir que, caso 'usuario.nome' seja undefined, null ou vazio, o conteúdo do elemento será definido como uma string vazia (''),
   // evitando que apareça 'undefined' ou erro na página.
-  document.getElementById('nome').textContent = usuario.nome || '';
+  document.getElementById('nome').textContent = usuario.nomeUsuario || '';
   document.getElementById('email').textContent = usuario.email || '';
   document.getElementById('telefone').textContent = usuario.telefone || '';
   document.getElementById('cpf').textContent = usuario.cpf || '';

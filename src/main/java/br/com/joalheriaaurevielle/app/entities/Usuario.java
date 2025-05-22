@@ -2,6 +2,8 @@ package br.com.joalheriaaurevielle.app.entities;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -39,6 +41,7 @@ public class Usuario {
 
     @ManyToOne
     @JoinColumn(name = "tipo_usuario_id", nullable = false)
+    @JsonBackReference
     private TipoUsuario tipoUsuario;
 
     // Construtores
