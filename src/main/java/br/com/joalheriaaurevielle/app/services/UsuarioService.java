@@ -30,6 +30,10 @@ public class UsuarioService {
         usuarioRepository.deleteById(id);
     }
     
+    public Usuario getUsuarioByCpf(String cpf) {
+    	return usuarioRepository.findByCpf(cpf);
+    }
+    
     public Usuario autenticarUsuario(String email, String senha) {
         Usuario usuario = usuarioRepository.findByEmail(email);
 

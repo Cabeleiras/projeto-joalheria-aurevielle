@@ -49,6 +49,11 @@ public class UsuarioController {
         usuarioService.deleteUsuario(id);
     }
     
+    @GetMapping("/{cpf}")
+    public Usuario getUsuario(@PathVariable String cpf) {
+    	return usuarioService.getUsuarioByCpf(cpf);
+    }
+    
     @PostMapping("/login")
     public Usuario login(@RequestBody Usuario loginRequest) {
     	Usuario usuario = usuarioService.autenticarUsuario(loginRequest.getEmail(), loginRequest.getSenha());
