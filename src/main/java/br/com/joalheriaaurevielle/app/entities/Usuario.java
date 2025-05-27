@@ -43,8 +43,8 @@ public class Usuario {
     private LocalDate dataNascimento;
 
     @ManyToOne
-    @JsonBackReference
     @JoinColumn(name = "tipo_usuario_id", nullable = false)
+    @JsonBackReference
     private TipoUsuario tipoUsuario;
     
     @OneToMany(mappedBy = "usuario")
