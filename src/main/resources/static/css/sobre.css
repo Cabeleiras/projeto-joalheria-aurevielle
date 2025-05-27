@@ -1,9 +1,11 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Topbar */
 header {
     background-color: #f5f5f5;
     padding: 20px 40px;
@@ -11,6 +13,9 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo h1 {
@@ -27,7 +32,7 @@ header {
 }
 
 .logo a:hover h1 {
-    color: #b87bf19a; /* Roxo suave ao passar o mouse */
+    color: #9a4ae5a0;
 }
 
 nav ul {
@@ -41,7 +46,7 @@ nav a {
     font-size: 16px;
     color: #444;
     padding: 8px 12px;
-    border-radius: 4px;
+    border-radius: 6px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -50,6 +55,12 @@ nav a:hover {
     color: #fff;
 }
 
+nav .ativo {
+    background-color: #9a4ae5;
+    color: white;
+}
+
+/* Seção Sobre */
 main {
     padding: 60px 20px;
     display: flex;
@@ -57,88 +68,63 @@ main {
     background-color: #fafafa;
 }
 
-.produto-detalhes {
+.sobre {
     display: flex;
     flex-wrap: wrap;
-    background-color: #fff;
+    background-color: white;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
 }
 
-.produto-detalhes img {
-    width: 100%;
-    max-width: 500px;
-    object-fit: cover;
-    border-right: 1px solid #f0f0f0;
-}
-
-.produto-detalhes .info {
+.texto-sobre {
     flex: 1;
     padding: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
 }
 
-.produto-detalhes .info h2 {
+.texto-sobre h2 {
     font-size: 32px;
     color: #333;
     font-family: 'Georgia', serif;
 }
 
-.produto-detalhes .info p {
+.texto-sobre p {
     font-size: 18px;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-.produto-detalhes #produto-preco {
-    font-size: 24px;
-    color: #4ae57e;
-    font-weight: bold;
+.imagem-sobre {
+    flex: 1;
 }
 
-.btn-comprar {
-    background-color: #4ae55f;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
+.imagem-sobre img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
-.btn-comprar:hover {
-    background-color: #65c74f;
-    transform: translateY(-2px);
-}
-
-@media (max-width: 768px) {
-    .produto-detalhes {
-        flex-direction: column;
-    }
-
-    .produto-detalhes img {
-        border-right: none;
-        border-bottom: 1px solid #f0f0f0;
-    }
-
-    .produto-detalhes .info {
-        padding: 20px;
-    }
-}
-
 
 /* Rodapé */
 footer {
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
+    padding: 12px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre {
+        flex-direction: column;
+    }
+
+    .texto-sobre {
+        padding: 20px;
+    }
 }
