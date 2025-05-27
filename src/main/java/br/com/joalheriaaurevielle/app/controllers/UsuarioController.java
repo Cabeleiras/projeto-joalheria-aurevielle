@@ -17,7 +17,7 @@ import br.com.joalheriaaurevielle.app.entities.Usuario;
 import br.com.joalheriaaurevielle.app.services.UsuarioService;
 
 @RestController
-@RequestMapping("/cadastrocliente")
+@RequestMapping("/cadastrousuario")
 public class UsuarioController {
 	
     @Autowired

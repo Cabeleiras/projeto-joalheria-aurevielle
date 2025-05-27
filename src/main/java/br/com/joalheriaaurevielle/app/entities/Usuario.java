@@ -1,8 +1,10 @@
 package br.com.joalheriaaurevielle.app.entities;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,6 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -40,9 +43,13 @@ public class Usuario {
     private LocalDate dataNascimento;
 
     @ManyToOne
-    @JoinColumn(name = "tipo_usuario_id", nullable = false)
     @JsonBackReference
+    @JoinColumn(name = "tipo_usuario_id", nullable = false)
     private TipoUsuario tipoUsuario;
+    
+    @OneToMany(mappedBy = "usuario")
+    @JsonManagedReference
+    private List<Endereco> enderecos;
 
     // Construtores
     public Usuario() {
