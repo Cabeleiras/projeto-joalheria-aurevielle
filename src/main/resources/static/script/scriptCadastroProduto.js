@@ -20,16 +20,16 @@ document.getElementById("cadastroProdutoForm").addEventListener("submit", async 
 			body: JSON.stringify({
 				nomeProduto,
 				descricaoProduto: descricao,
-				preco,
+				preco: parseFloat(preco),
 				imgUrl,
 				categoriaProduto: {
-					idCategoriaProduto: categoriaProduto
+					idCategoriaProduto: parseInt(categoriaProduto)
 				},
 				tipoProduto: {
-					idTipoProduto: tipoProduto
+					idTipoProduto: parseInt(tipoProduto)
 				},
 				ornamento: {
-					idOrnamento: ornamentoProduto
+					idOrnamento: parseInt(ornamentoProduto)
 				}
 			}),
 		});

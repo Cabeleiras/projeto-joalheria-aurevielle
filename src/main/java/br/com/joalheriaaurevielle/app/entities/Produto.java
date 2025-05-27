@@ -2,6 +2,8 @@ package br.com.joalheriaaurevielle.app.entities;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,14 +34,17 @@ public class Produto {
     private String imgUrl;
   
     @ManyToOne
+    @JsonIgnoreProperties("produtos")
     @JoinColumn(name = "categoria_id", nullable = false)
     private CategoriaProduto categoriaProduto;
 
     @ManyToOne
+    @JsonIgnoreProperties("produtos")
     @JoinColumn(name = "tipo_produto_id", nullable = false)
     private TipoProduto tipoProduto;
 
     @ManyToOne
+    @JsonIgnoreProperties("produtos")
     @JoinColumn(name = "ornamento_id")
     private Ornamentos ornamento;
 
@@ -93,7 +98,7 @@ public class Produto {
         this.preco = preco;
     }
     
-    public String GetImgUrl() {
+    public String getImgUrl() {
     	return imgUrl;
     }
     
