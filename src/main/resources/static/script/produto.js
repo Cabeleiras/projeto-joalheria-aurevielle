@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 document.getElementById("produto-nome").textContent = produto.nomeProduto;
                
-                document.getElementById("produto-descricao").textContent = produto.descricao;
+                document.getElementById("produto-descricao").textContent = produto.descricaoProduto;
                
                 document.getElementById("produto-preco").textContent = `R$ ${produto.preco.toFixed(2)}`;
             })
