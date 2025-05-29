@@ -24,3 +24,5 @@ INSERT IGNORE INTO tb_ornamentos (id_ornamento, nome_ornamento, descricao_orname
 (3, 'Topázio', 'Pode ter várias cores, ligada à clareza e foco'),
 (4, 'Lápis-lazúli', 'Azul intenso, símbolo de realeza e intuição'),
 (5, 'Jade', 'Símbolo de sabedoria e serenidade, de cor verde');
+
+ALTER TABLE tb_produto MODIFY COLUMN img_url TEXT;
