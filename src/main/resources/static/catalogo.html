@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurevielle Joias</title>
+  <link rel="stylesheet" href="/css/catalogo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+      rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="catalogo.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </div>
+        </div>
+
+        <div id="logo">Aurevielle</div>
+
+
+        <div class="icon-button">
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="" class="dropbtn">
+                            <img class="profile-button" src="img/icon-perfil.png" alt="Profile Icon">
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="login.html">Entrar</a>
+                            <a href="cadastroUsuario.html">Cadastrar</a>
+                            <a href="cadastroProduto.html">Cadastrar Produto</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2 class="hero-title">Coleção <span class="highlight">Aurevielle</span></h2>
+      <p class="hero-desc">
+        Descubra nossa exclusiva coleção de joias artesanais, criadas com os mais finos materiais 
+        e técnicas tradicionais de ourivesaria.
+      </p>
+      <button class="hero-btn">Explorar Coleção</button>
+    </div>
+  </section>
+
+  <!-- Catalog Section -->
+  <section class="catalog">
+    <div class="container">
+      <div class="catalog-header">
+        <h3>Nossa Coleção</h3>
+        <p>
+          Cada peça é única e criada com atenção aos mínimos detalhes, 
+          combinando tradição e modernidade em designs atemporais.
+        </p>
+      </div>
+
+      <!-- Filter -->
+      <div class="filter">
+        <button onclick="filterProducts('Todos')" class="filter-btn active">Todos</button>
+        <button onclick="filterProducts('Anéis')" class="filter-btn">Anéis</button>
+        <button onclick="filterProducts('Colares')" class="filter-btn">Colares</button>
+        <button onclick="filterProducts('Brincos')" class="filter-btn">Brincos</button>
+        <button onclick="filterProducts('Pulseiras')" class="filter-btn">Pulseiras</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid" id="products-container">
+        <!-- Cards gerados via JS -->
+      </div>
+
+      <div id="no-products" class="no-products hidden">
+        Nenhum produto encontrado para esta categoria.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h4 class="footer-title">Aurevielle</h4>
+        <p>Criamos joias únicas para momentos especiais.</p>
+      </div>
+      <div>
+        <h5>Atendimento</h5>
+        <ul>
+          <li>Segunda à Sexta: 9h às 18h</li>
+          <li>Sábado: 9h às 15h</li>
+          <li>Domingo: Fechado</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li>(11) 9999-9999</li>
+          <li>contato@Auravielle.com.br</li>
+          <li>Sorocaba - SP</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Redes Sociais</h5>
+        <ul>
+          <li>Instagram</li>
+          <li>Facebook</li>
+          <li>WhatsApp</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Aurevielle Joias. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script src="../script/scriptCatalogo.js"></script>
+</body>
+</html>

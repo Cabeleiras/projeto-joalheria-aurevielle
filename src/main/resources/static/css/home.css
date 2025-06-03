@@ -180,72 +180,45 @@ a {
     font-family: 'Catamaran', Geneva, Tahoma, sans-serif;
 }
 
-/* ===== FOOTER ===== */
-.footer {
-    background-color: #333;
+ /* Footer */
+ .footer {
+    background-color: #000;
     color: white;
     padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .footer-title {
+    color: #facc15;
+  }
+  
+  .footer h5 {
+    margin-bottom: 10px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer li {
+    margin-bottom: 5px;
+    color: #ccc;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 20px;
+    padding-top: 10px;
     text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.about-us {
-    flex: 1;
-    padding: 20px;
-    max-width: 600px;
-}
-
-.about-us h2 {
-    font-size: 24px;
-    color: #b8860b;
-    font-family: 'Bodoni Moda SC', serif;
-    margin-bottom: 15px;
-}
-
-.about-us p {
-    font-size: 16px;
-    color: #ddd;
-    line-height: 1.6;
-}
-
-.team-photo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.team-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #b8860b;
-}
-
-.footer-bottom {
-    background-color: #222;
-    padding: 10px 0;
-    width: 100%;
-}
-
-.footer-bottom p {
-    font-size: 14px;
-    color: #bbb;
-}
+    color: #777;
+  }
+  
 
 /* ===== ANIMAÇÕES ===== */
 .elemento-animado {
@@ -258,8 +231,6 @@ a {
     opacity: 1;
     transform: translateY(0);
 }
-
-
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {

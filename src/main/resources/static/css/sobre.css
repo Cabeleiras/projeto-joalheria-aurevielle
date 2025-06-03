@@ -25,6 +25,10 @@ header {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s;
+    
+}
+.logo h1:hover{
+    color: #facc15;
 }
 
 .logo a {
@@ -49,13 +53,13 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #9a4ae5b4;
-    color: #fff;
+    
+    color: #facc15;
 }
 
 nav .ativo {
-    background-color: #9a4ae5;
-    color: white;
+    
+    color: #facc15;
 }
 
 /* Seção Sobre */

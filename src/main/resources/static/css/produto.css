@@ -27,7 +27,7 @@ header {
 }
 
 .logo a:hover h1 {
-    color: #b87bf19a; /* Roxo suave ao passar o mouse */
+    color: #facc15; 
 }
 
 nav ul {
@@ -46,7 +46,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #9a4ae5b4;
+    background-color: #facc15;
     color: #fff;
 }
 
