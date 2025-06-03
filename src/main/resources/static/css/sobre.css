@@ -31,9 +31,7 @@ header {
     text-decoration: none;
 }
 
-.logo a:hover h1 {
-    color: #9a4ae5a0;
-}
+
 
 nav ul {
     list-style: none;
