@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const senha = document.getElementById('senha').value;
 
 
-		fetch('http://localhost:8080/cadastrocliente/login', {
+		fetch('http://localhost:8080/cadastrousuario/login', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				}
 			})
 			.then(usuario => {
-				alert('Login realizado com sucesso! Bem-vindo, ' + usuario.nomeUsuario);
 				// Aqui você pode redirecionar para a página de perfil, por exemplo:
 				window.location.href = '../perfilUsuario.html';
 				// Também pode armazenar dados no localStorage/sessionStorage, se quiser

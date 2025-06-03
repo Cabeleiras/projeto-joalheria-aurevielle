@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Configura botão logout para limpar o localStorage e voltar para login
   document.getElementById('logoutBtn').addEventListener('click', () => {
     localStorage.removeItem('usuarioLogado');
-    alert('Logout efetuado!');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
   });
 });

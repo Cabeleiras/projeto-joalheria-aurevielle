@@ -149,11 +149,3 @@ input:-webkit-autofill {
 .form-control[type="radio"] {
     accent-color: #6366f1;
 }
-
-#successMessage {
-    color: green;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-
