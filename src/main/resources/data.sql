@@ -19,10 +19,11 @@ INSERT IGNORE INTO tb_tipo_produto (id_tipo_produto, nome_tipo_produto, descrica
 
 -- Inserindo Ornamentos (se não existirem)
 INSERT IGNORE INTO tb_ornamentos (id_ornamento, nome_ornamento, descricao_ornamento) VALUES 
-(1, 'Ruby', 'Pedra preciosa vermelha, símbolo de paixão e nobreza'),
-(2, 'Ametista', 'Pedra roxa associada à proteção e espiritualidade'),
-(3, 'Topázio', 'Pode ter várias cores, ligada à clareza e foco'),
-(4, 'Lápis-lazúli', 'Azul intenso, símbolo de realeza e intuição'),
-(5, 'Jade', 'Símbolo de sabedoria e serenidade, de cor verde');
+(1, 'Nenhum', 'Não possui nenhum ornamento'),
+(2, 'Ruby', 'Pedra preciosa vermelha, símbolo de paixão e nobreza'),
+(3, 'Ametista', 'Pedra roxa associada à proteção e espiritualidade'),
+(4, 'Topázio', 'Pode ter várias cores, ligada à clareza e foco'),
+(5, 'Lápis-lazúli', 'Azul intenso, símbolo de realeza e intuição'),
+(6, 'Jade', 'Símbolo de sabedoria e serenidade, de cor verde');
 
 ALTER TABLE tb_produto MODIFY COLUMN img_url TEXT;
