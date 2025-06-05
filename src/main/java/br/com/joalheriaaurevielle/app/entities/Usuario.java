@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
@@ -44,7 +45,7 @@ public class Usuario {
 
     @ManyToOne
     @JoinColumn(name = "tipo_usuario_id", nullable = false)
-    @JsonBackReference
+    @JsonIgnoreProperties("usuarios")
     private TipoUsuario tipoUsuario;
     
     @OneToMany(mappedBy = "usuario")

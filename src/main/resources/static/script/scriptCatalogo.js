@@ -18,7 +18,7 @@ function renderProducts(produtosFiltrados) {
             card.className = 'card';
 
             card.innerHTML = `
-        <a href="Produto.html?id=${produto.idProduto}">
+        <a href="paginaProduto.html?id=${produto.idProduto}">
         <img src="${produto.imgUrl}" alt="${produto.nomeProduto}">
         <div class="info">
           <h4>${produto.nomeProduto}</h4>

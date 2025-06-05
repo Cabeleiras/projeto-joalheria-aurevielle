@@ -27,3 +27,8 @@ INSERT IGNORE INTO tb_ornamentos (id_ornamento, nome_ornamento, descricao_orname
 (6, 'Jade', 'Símbolo de sabedoria e serenidade, de cor verde');
 
 ALTER TABLE tb_produto MODIFY COLUMN img_url TEXT;
+
+
+-- Inserindo Usuarios predefinidos
+INSERT IGNORE INTO tb_usuario (id_usuario, cpf, dt_nascimento, email, nome_usuario, senha, telefone, tipo_usuario_id) VALUES
+(1, '00000000000', '2000-01-01', 'admin@gmail.com', 'AdminQu8', 'admin32u', '15999999999', 1);
