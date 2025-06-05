@@ -94,3 +94,4 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error("Erro ao carregar produto:", error)); // Exibe erro caso a requisição falhe
     }
 });
+

@@ -5,20 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AUREVIELLE</title>
   <link rel="stylesheet" href="./css/sobre.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+        rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="container nav-content">
-      <div class="logo">AUREVIELLE</div>
-      <div class="menu">
-        <a href="./index.html">Home</a>
-      
-      </div>
+  <header>
+    <div class="navbar">
+        <div class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="catalogo.html">Produtos</a></li>
+            <li><a href="contatos.html">Contato</a></li>
+        </div>
     </div>
-  </nav>
 
+    <div id="logo">Aurevielle</div>
+
+
+    <div class="icon-button">
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="" class="dropbtn">
+                        <img class="profile-button" src="img/icon-perfil.png" alt="Profile Icon">
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="login.html">Entrar</a>
+                        <a href="cadastroUsuario.html">Cadastrar</a>
+                        <a href="cadastroProduto.html">Cadastrar Produto</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  
+
+ 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-overlay"></div>
@@ -32,11 +60,11 @@
       <p class="description">
         Criando momentos eternos através de joias excepcionais  <br> 
     
-        <h3 class="h3">No coração de Sorocaba, São Paulo, encontra-se a Joalheria Aurevielle, um verdadeiro templo da elegância e sofisticação. Desde sua fundação, a Aurevielle se destaca por sua dedicação à arte da joalheria, criando peças que vão além da simples ornamentação, tornando-se verdadeiras expressões de amor, história e personalidade.
+        <h3 class="h3">Nossa joalheria é feita para quem valoriza beleza, elegância e significado. Trabalhamos com materiais de alta qualidade, oferecendo peças únicas, que combinam sofisticação e durabilidade.
 
-            Cada joia é desenvolvida com excelência, unindo técnicas artesanais, design contemporâneo e materiais de altíssima qualidade. Nossa missão é eternizar momentos, oferecendo peças únicas que refletem beleza, significado e exclusividade.
-            
-            Na Aurevielle, você encontra muito mais que joias. Encontrará uma experiência, um atendimento personalizado, e o compromisso de transformar sonhos em realidade.</h3>
+          Mais que joias, entregamos histórias e momentos especiais. Com atendimento personalizado e atenção aos detalhes, criamos peças que refletem amor, conquistas e eternizam memórias.
+          
+          Seja bem-vindo(a) à nossa joalheria, onde cada joia tem um brilho único — assim como você.</h3>
           
     
         
@@ -71,14 +99,44 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
+   <!-- Footer -->
+   <footer class="footer">
     <div class="container footer-content">
-      <div class="footer-logo">AUREVIELLE</div>
-      <p>Joalheria de Excelência em Sorocaba, SP</p>
-      <div class="divider small"></div>
+      <div>
+        <h4 class="footer-title">Aurevielle</h4>
+        <p>Criamos joias únicas para momentos especiais.</p>
+      </div>
+      <div>
+        <h5>Atendimento</h5>
+        <ul>
+          <li>Segunda à Sexta: 9h às 18h</li>
+          <li>Sábado: 9h às 15h</li>
+          <li>Domingo: Fechado</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li>(11) 9999-9999</li>
+          <li>contato@Auravielle.com.br</li>
+          <li>Sorocaba - SP</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Redes Sociais</h5>
+        <ul>
+          <li>Instagram</li>
+          <li>Facebook</li>
+          <li>WhatsApp</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Aurevielle Joias. Todos os direitos reservados.
     </div>
   </footer>
+
+  <script src="./script/scriptSobre.js"></script>
 
 </body>
 </html>

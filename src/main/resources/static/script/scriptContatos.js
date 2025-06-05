@@ -1,11 +1,3 @@
-window.addEventListener('load', () => {
-    document.querySelector('main').style.opacity = 0;
-    setTimeout(() => {
-        document.querySelector('main').style.transition = 'opacity 1s';
-        document.querySelector('main').style.opacity = 1;
-    }, 100);
-});
-
 // Alterna a visibilidade do menu drop-down ao clicar
 document.querySelector('.dropbtn').addEventListener('click', function (event) {
     event.preventDefault();
