@@ -17,6 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("produto-descricao").textContent = produto.descricaoProduto;
                
                 document.getElementById("produto-preco").textContent = `R$ ${produto.preco.toFixed(2)}`;
+
+                document.getElementById("produto-categoria").textContent = `Categoria: ${produto.categoriaProduto.nomeCategoriaProduto}`;
+
+                document.getElementById("produto-tipo").textContent = `Tipo: ${produto.tipoProduto.nomeTipo}`;
+
+                document.getElementById("produto-ornamento").textContent = `Ornamento: ${produto.ornamento.nomeOrnamento}`;
+				
+				document.getElementById("categoria-produto").textContent = produto.categoriaProduto.nomeCategoriaProduto;
             })
             .catch(error => console.error("Erro ao carregar produto:", error));
     }
