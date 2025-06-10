@@ -149,3 +149,88 @@ input:-webkit-autofill {
 .form-control[type="radio"] {
     accent-color: #6366f1;
 }
+
+/* RESPONSIVIDADE */
+
+/* Padrão para telas maiores */
+#form_container {
+    width: 400px;
+}
+
+/* Responsivo para smartphones (ex: 430x932) */
+@media screen and (max-width: 480px) {
+    #form_container {
+        width: 90%;
+        padding: 16px;
+        font-size: 12px;
+    }
+
+    .input-box label {
+        font-size: 12px;
+    }
+
+    #form_header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .input-field i {
+        width: 30px;
+        font-size: 14px;
+    }
+
+    .btn-default {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Responsivo para tablets (ex: 768x648) */
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    #form_container {
+        width: 70%;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .input-field i {
+        width: 40px;
+    }
+
+    .btn-default {
+        font-size: 15px;
+        width: 100%;
+    }
+}
+
+/* Responsivo para desktops menores (ex: 1024x864) */
+@media screen and (min-width: 901px) {
+    #form_container {
+        width: 50%;
+        font-size: 20px;
+    }
+
+    .input-box label {
+        font-size: 20px;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .input-field i {
+        width: 40px;
+    }
+
+    .btn-default {
+        width: 100%;
+    }
+}

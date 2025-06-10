@@ -150,8 +150,80 @@ input:-webkit-autofill {
     accent-color: #6366f1;
 }
 
-#successMessage {
-    color: green;
-    font-size: 18px;
-    margin-top: 10px;
+
+/* RESPONSIVIDADE */
+
+/* Smartphones (430x932) */
+@media screen and (max-width: 480px) {
+    #form_container {
+        padding: 16px;
+        max-width: 100%;
+    }
+
+    #form_title {
+        font-size: 20px;
+    }
+
+    .btn-default {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .input-field i {
+        width: 30px;
+        font-size: 14px;
+    }
+
+    .form-control {
+        font-size: 4px;
+    }
+}
+
+/* Tablets (768x648) */
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    #form_container {
+        width: 60%;
+    }
+
+    #form_title {
+        font-size: 22px;
+    }
+
+    .btn-default {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .input-field i {
+        width: 35px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+}
+
+/* Pequenos desktops (1024x864) */
+@media screen and (min-width: 901px) {
+    #form_container {
+        width: 60%;
+        font-size: 20px;
+    }
+
+    .input-box label {
+        font-size: 20px;
+    }
+
+    .input-field i {
+        width: 40px;
+    }
+
+    .btn-default {
+        width: 100%;
+    }
+
+    .form-control {
+        font-size: 4px;
+    }
 }
