@@ -98,7 +98,7 @@
   }
   
   .hero h2 span {
-    background: linear-gradient(to right, #ffd700, #daa520);
+    background: linear-gradient(to right, #ffffff, #ffffff);
     -webkit-background-clip: text;
     color: transparent;
   }
@@ -149,7 +149,7 @@
   }
   
   label {
-    color: #ffd700;
+    color: white;
     font-weight: 500;
     display: block;
     margin-bottom: 6px;
@@ -171,7 +171,7 @@
   .submit-button {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(to right, #ffd700, #daa520);
+    background: linear-gradient(to right, #f3de6d, #efc24f);
     border: none;
     color: black;
     font-weight: bold;
@@ -195,7 +195,7 @@
   .icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(to bottom right, #ffd700, #daa520);
+    background: linear-gradient(to bottom right, #00000000, #2c2410);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -206,7 +206,7 @@
   }
   
   .info-item h4 {
-    color: #ffd700;
+    color: #f3de6d;
     margin-bottom: 4px;
   }
   
@@ -223,7 +223,7 @@
   }
   
   .social h4 {
-    color: #ffd700;
+    color: #f3de6d;
     margin-bottom: 10px;
   }
   
@@ -235,7 +235,7 @@
   .social-icons a {
     width: 40px;
     height: 40px;
-    background: linear-gradient(to bottom right, #ffd700, #daa520);
+    background: linear-gradient(to bottom right, #4b4a49, #daa52000);
     border-radius: 50%;
     display: flex;
     align-items: center;
