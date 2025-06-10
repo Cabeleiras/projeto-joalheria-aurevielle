@@ -1,8 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: linear-gradient(to bottom right, #000, #111);
-  color: #fff;
+  background-color: #fff;
 }
 
 a {

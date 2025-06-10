@@ -1,0 +1,117 @@
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.5s ease;
+}
+
+header:hover {
+    background-color: rgb(37, 36, 36);
+}
+
+/* Transição de cor com delay */
+header .nav-links a,
+header #logo,
+header .icon-button a {
+    color: rgb(0, 0, 0);
+    transition: color 0.5s ease 0.3s;
+}
+
+.dropdown-content a {
+    color: white !important;
+}
+
+header:hover .nav-links a,
+header:hover #logo {
+    color: #f3e9e9;
+}
+
+/* Ícone do perfil */
+.profile-button {
+    background-image: url(../img/icon-perfil.png);
+    background-size: cover;
+    background-position: center;
+    height: 35px;
+    width: 35px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: filter 0.5s ease 0.3s, transform 0.3s;
+}
+
+header:hover .profile-button {
+    filter: invert(100%);
+}
+
+.profile-button:hover {
+    transform: scale(1.2);
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.nav-links a,
+.icon-button a {
+    text-decoration: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+#logo {
+    font-family: "Bodoni Moda SC", serif;
+    font-size: 50px;
+    color: rgb(251, 246, 246);
+    margin-right: 440px;
+}
+
+.icon-button {
+    margin-right: 40px;
+}
+
+/* ===== MENU DROPDOWN ===== */
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    margin-left: -15px;
+    background-color: #fffefe;
+    min-width: 110px;
+    box-shadow: 0 8px 16px rgba(255, 252, 252, 0.2);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    text-align: center;
+    padding: 12px 16px;
+    background-color: #444;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
