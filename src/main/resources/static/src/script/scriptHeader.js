@@ -31,6 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('sair').addEventListener('click', () => {
         localStorage.removeItem('usuarioLogado');
-        window.location.href = '../paginaLogin.html';
+        window.location.href = '../pages/paginaLogin.html';
     });
 });

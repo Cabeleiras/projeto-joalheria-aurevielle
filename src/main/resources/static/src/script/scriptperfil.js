@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!usuarioJson) {
     alert('Usuário não está logado! Redirecionando para o login...');
-    window.location.href = 'login.html';  // redireciona para login se não tiver dados
+    window.location.href = '../login.html';  // redireciona para login se não tiver dados
     return;
   }
 
@@ -27,6 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Configura botão logout para limpar o localStorage e voltar para login
   document.getElementById('logoutBtn').addEventListener('click', () => {
     localStorage.removeItem('usuarioLogado');
-    window.location.href = 'index.html';
+    window.location.href = '../pages/index.html';
   });
 });

@@ -33,7 +33,7 @@ document.getElementById("cadastroEnderecoForm").addEventListener("submit", async
 
 	if (!usuarioId) {
         alert("Usuário não encontrado. Por favor, cadastre um usuário primeiro.");
-        window.location.href = "../cadastroUsuario.html";
+        window.location.href = "../pages/cadastroUsuario.html";
         return;
     }
 
