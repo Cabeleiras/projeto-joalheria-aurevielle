@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Produto</title>
-    <link rel="stylesheet" href="../styles/paginaProduto.css" />
-    <link rel="stylesheet" href="../styles/headerInv.css">
+    <link rel="stylesheet" href="./css/paginaProduto.css" />
+    <link rel="stylesheet" href="./css/headerInv.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,36 +16,35 @@
 
 <body>
 
-    <header>
-        <div class="navbar">
-            <div class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="paginaSobre.html">Sobre</a></li>
-                <li><a href="paginaCatalogo.html">Produtos</a></li>
-                <li><a href="paginaContatos.html">Contato</a></li>
+  <header>
+    <div class="navbar">
+      <div class="nav-links">
+        <li><a href="./index.html">Início</a></li>
+        <li><a href="./paginaSobre.html">Sobre</a></li>
+        <li><a href="./paginaCatalogo.html">Produtos</a></li>
+        <li><a href="./paginaContatos.html">Contato</a></li>
+      </div>
+    </div>
+
+    <div id="logo">Aurevielle</div>
+
+
+    <div class="icon-button">
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="" class="dropbtn">
+              <img class="profile-button" src="./img/icon-perfil.png" alt="Profile Icon">
+            </a>
+            <div class="dropdown-content">
+              <a href="./paginaLogin.html" id="entrar">Entrar</a>
+              <a href="./cadastroUsuario.html" id="cadastrar">Cadastrar</a>
             </div>
-
-        </div>
-
-        <div id="logo">Aurevielle</div>
-
-
-        <div class="icon-button">
-            <nav>
-                <ul>
-                    <li class="dropdown">
-                        <a href="" class="dropbtn">
-                            <img class="profile-button" src="/assets/img/icon-perfil.png" alt="Profile Icon">
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="paginaLogin.html">Entrar</a>
-                            <a href="cadastroUsuario.html">Cadastrar</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
     <main class="main">
         <div class="product-container">
@@ -144,8 +143,8 @@
         </div>
     </footer>
 
-    <script src="../script/scriptProduto.js"></script>
-    <script src="../script/scriptHeader.js"></script>
+    <script src="./script/scriptProduto.js"></script>
+    <script src="./script/scriptHeader.js"></script>
 
 
 </body>

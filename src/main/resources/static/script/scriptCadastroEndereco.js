@@ -33,7 +33,7 @@ document.getElementById("cadastroEnderecoForm").addEventListener("submit", async
 
 	if (!usuarioId) {
         alert("Usuário não encontrado. Por favor, cadastre um usuário primeiro.");
-        window.location.href = "../pages/cadastroUsuario.html";
+        window.location.href = "./cadastroUsuario.html";
         return;
     }
 
@@ -73,7 +73,7 @@ document.getElementById("cadastroEnderecoForm").addEventListener("submit", async
         .then(data => {
             alert("Cadastro do endereço realizado com sucesso!");
             localStorage.removeItem('usuarioId');
-            window.location.href = "../index.html";
+            window.location.href = "./index.html";
         })
         .catch(error => {
             console.error("Erro:", error);

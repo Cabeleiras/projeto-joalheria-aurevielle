@@ -35,7 +35,7 @@ document.getElementById("cadastroUsuarioForm").addEventListener("submit", async 
 
 				localStorage.setItem('usuarioId', data.idUsuario); 
 
-				window.location.href = '../pages/cadastroEndereco.html';
+				window.location.href = './cadastroEndereco.html';
 			})
 			.catch(error => {
 				console.error('Erro no cadastro:', error);
