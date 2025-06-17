@@ -19,18 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("cadastrar").remove();
 
         dropdownContent.innerHTML = `
-    <a href="../perfilUsuario.html">Perfil</a>
+    <a href="/src/pages/perfilUsuario.html">Perfil</a>
     <a id="sair">Sair</a>
     `;
 	if (usuario.tipoUsuario.idTipoUsuario == 1) {
 		dropdownContent.innerHTML += `
-	<a href="cadastroProduto.html">Cadastrar Produto</a>
+	<a href="/src/pages/cadastroProduto.html">Cadastrar Produto</a>
 	`;
 		}
     }
 
     document.getElementById('sair').addEventListener('click', () => {
         localStorage.removeItem('usuarioLogado');
-        window.location.href = './paginaLogin.html';
+        window.location.href = '/src/pages/paginaLogin.html';
     });
 });

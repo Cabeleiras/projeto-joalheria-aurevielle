@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./src/style/index.css">
+  <link rel="stylesheet" href="./src/style/header.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -18,26 +18,25 @@
   <header>
     <div class="navbar">
       <div class="nav-links">
-        <li><a href="./index.html">Início</a></li>
-        <li><a href="./paginaSobre.html">Sobre</a></li>
-        <li><a href="./paginaCatalogo.html">Produtos</a></li>
-        <li><a href="./paginaContatos.html">Contato</a></li>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="./src/pages/paginaSobre.html">Sobre</a></li>
+        <li><a href="./src/pages/paginaCatalogo.html">Produtos</a></li>
+        <li><a href="./src/pages/paginaContatos.html">Contato</a></li>
       </div>
     </div>
 
     <div id="logo">Aurevielle</div>
-
 
     <div class="icon-button">
       <nav>
         <ul>
           <li class="dropdown">
             <a href="" class="dropbtn">
-              <img class="profile-button" src="./img/icon-perfil.png" alt="Profile Icon">
+              <img class="profile-button" src="./assets/imgs/icon-perfil.png" alt="Profile Icon">
             </a>
             <div class="dropdown-content">
-              <a href="./paginaLogin.html" id="entrar">Entrar</a>
-              <a href="./cadastroUsuario.html" id="cadastrar">Cadastrar</a>
+              <a href="./src/pages/paginaLogin.html" id="entrar">Entrar</a>
+              <a href="./src/pages/cadastroUsuario.html" id="cadastrar">Cadastrar</a>
             </div>
           </li>
         </ul>
@@ -50,7 +49,7 @@
 
       <div class="video-parallax">
         <video autoplay muted loop id="background-video">
-          <source src="img/Vídeo_de_Jóia_Escura_Gerado.mp4">
+          <source src="./assets/videos/Vídeo_de_Jóia_Escura_Gerado.mp4">
         </video>
       </div>
     </section>
@@ -58,13 +57,9 @@
     <section id="sobre" class="elemento-animado">
       <h2>Sobre a Nossa Joalheria</h2>
       <p>No coração de Sorocaba, São Paulo, encontra-se a Joalheria Aurevielle, um verdadeiro templo da elegância
-        e sofisticação. Desde a sua fundação, a Joalheria Joias Joia se destaca por sua dedicação à arte da
+        e sofisticação. Desde a sua fundação, a Joalheria Aurevielle se destaca por sua dedicação à arte da
         joalheria, criando peças que vão além da simples ornamentação, tornando-se verdadeiras expressões de
         amor, história e personalidade.</p>
-
-
-
-    </section>
     </section>
   </main>
 
@@ -88,7 +83,7 @@
         <h5>Contato</h5>
         <ul>
           <li>(11) 9999-9999</li>
-          <li>contato@Auravielle.com.br</li>
+          <li>contato@Aurevielle.com.br</li>
           <li>Sorocaba - SP</li>
         </ul>
       </div>
@@ -106,8 +101,8 @@
     </div>
   </footer>
 
-  <script src="./script/scriptIndex.js"></script>
-  <script src="./script/scriptHeader.js"></script>
+  <script src="./src/script/scriptIndex.js"></script>
+  <script src="./src/script/scriptHeader.js"></script>
 
 </body>
 
