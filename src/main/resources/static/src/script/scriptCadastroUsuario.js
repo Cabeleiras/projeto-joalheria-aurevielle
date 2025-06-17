@@ -46,3 +46,16 @@ document.getElementById("cadastroUsuarioForm").addEventListener("submit", async 
 		alert("Ocorreu um erro ao tentar cadastrar o usuário. Tente novamente.");
 	}
 });
+
+function viewPassword() {
+	const password = document.getElementById('senhaUsuario');
+	const btnPassword = document.getElementById('btn-view-password');
+
+	if (password.type == 'password') {
+		password.type = 'text';
+		btnPassword.className = 'fa-solid fa-eye';
+	} else {
+		password.type = 'password';
+		btnPassword.className = 'fa-solid fa-eye-slash';
+	}
+}

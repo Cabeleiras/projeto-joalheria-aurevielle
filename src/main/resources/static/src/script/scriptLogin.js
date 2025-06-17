@@ -38,3 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 	});
 });
+
+function viewPassword() {
+	const password = document.getElementById('senha');
+	const btnPassword = document.getElementById('btn-view-password');
+
+	if (password.type == 'password') {
+		password.type = 'text';
+		btnPassword.className = 'fa-solid fa-eye';
+	} else {
+		password.type = 'password';
+		btnPassword.className = 'fa-solid fa-eye-slash';
+	}
+}
+
