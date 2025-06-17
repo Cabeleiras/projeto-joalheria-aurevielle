@@ -205,7 +205,7 @@ input:-webkit-autofill {
 }
 
 /* Pequenos desktops (1024x864) */
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 901px)  and (max-width: 1100px) {
     #form_container {
         width: 60%;
         font-size: 20px;
